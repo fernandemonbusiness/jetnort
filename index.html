@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>JETNORT · Buses Oruro – Iquique</title>
+<meta name="description" content="Reserva tu pasaje Oruro – Iquique, consulta horarios y elige tu asiento en línea." />
+<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<header id="nav"><a href="#inicio" class="logo">JET<b>NORT</b></a>
+  <button id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav id="links"><a href="#rutas">Rutas</a><a href="#horarios">Horarios</a><a href="#reservas">Reservas</a><a href="#info">Información</a><a href="#contacto">Contacto</a><a href="#reservas" class="btn sm">Reservar</a></nav></header>
+
+<section id="inicio" class="hero">
+  <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=70" alt="Bus en carretera" />
+  <div class="hero-in">
+    <h1>Viaja de Oruro a Iquique con comodidad y seguridad</h1>
+    <p>Reserva tu pasaje y elige tu asiento en minutos</p>
+    <form id="search" class="card sbox">
+      <label>Origen<select id="o"><option value="OI">Oruro</option><option value="IO">Iquique</option></select></label>
+      <label>Destino<select id="d"><option value="OI">Iquique</option><option value="IO">Oruro</option></select></label>
+      <label>Ida<input type="date" id="f1" required /></label>
+      <label>Vuelta (opcional)<input type="date" id="f2" /></label>
+      <label>Pasajeros<input type="number" id="px" min="1" max="6" value="1" /></label>
+      <button class="btn">Buscar pasajes</button>
+    </form>
+    <a href="#horarios" class="btn outline">Ver horarios</a>
+  </div>
+  <a href="#rutas" class="scroll" aria-label="Bajar"><i></i></a>
+</section>
+
+<section id="rutas" class="wrap reveal"><h2>Nuestras rutas</h2>
+  <div class="cards">
+    <article class="route"><img loading="lazy" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=700&q=70" alt="Altiplano" /><div><h3>Oruro → Iquique</h3><p>Duración aprox.: [DURACIÓN]</p><p>Desde <b>Bs 200</b> <small>(ejemplo)</small></p></div></article>
+    <article class="route"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=70" alt="Costa de Iquique" /><div><h3>Iquique → Oruro</h3><p>Duración aprox.: [DURACIÓN]</p><p>Desde <b>Bs 200</b> <small>(ejemplo)</small></p></div></article>
+  </div>
+  <p class="note">Cruce de frontera: <b>Pisiga</b> (Bolivia) – <b>Colchane</b> (Chile). Paradas intermedias: [A CONFIRMAR].</p>
+</section>
+
+<section id="horarios" class="alt"><div class="wrap reveal"><h2>Horarios de salida</h2>
+  <div class="filters"><div id="dtabs"></div>
+    <select id="fday" aria-label="Día"><option value="">Todos los días</option></select>
+    <select id="fsvc" aria-label="Servicio"><option value="">Todos los servicios</option><option value="semicama">Semicama</option><option value="cama">Cama</option></select></div>
+  <div class="scrollx"><table><thead><tr><th>Salida</th><th>Llegada</th><th>Servicio</th><th>Próxima fecha</th><th>Precio</th><th>Disponibilidad</th><th></th></tr></thead><tbody id="sched"></tbody></table></div>
+  <p class="note">Horarios, precios y llegadas son de ejemplo [HORARIOS A CONFIRMAR].</p></div></section>
+
+<section id="reservas" class="wrap reveal"><h2>Reserva tu pasaje</h2><div id="bk"></div>
+  <form id="lookup" class="card"><h3>Consultar mi reserva</h3><div class="grid2"><label>Código<input id="lc" placeholder="JN-XXXXXX" required /></label><label>Documento<input id="ld" required /></label></div><button class="btn">Consultar</button><div id="lres"></div></form></section>
+
+<section id="info" class="alt"><div class="wrap reveal"><h2>Información para el viajero</h2>
+  <p>Documentos para cruzar la frontera: [A CONFIRMAR CON LA EMPRESA]. Equipaje, menores, cambios y cancelaciones: [A COMPLETAR].</p>
+  <details><summary>¿Con cuánta anticipación debo llegar al terminal?</summary><p>[A COMPLETAR]</p></details>
+  <details><summary>¿Puedo cambiar o cancelar mi pasaje?</summary><p>[A COMPLETAR según política de la empresa]</p></details>
+  <details><summary>¿Qué documento necesito para viajar?</summary><p>[A CONFIRMAR: cédula o pasaporte, y requisitos de migración]</p></details>
+  <details><summary>¿Cuánto equipaje puedo llevar?</summary><p>[A COMPLETAR]</p></details></div></section>
+
+<section id="nosotros" class="wrap about reveal"><div><h2>Más de 10 años conectando Bolivia y Chile</h2>
+  <p>JETNORT une Oruro e Iquique con servicios Semicama y Cama, pensados para viajar seguro y descansar durante el trayecto.</p>
+  <p>Nuestro compromiso: puntualidad, trato cercano y una experiencia de viaje clara desde la reserva hasta la llegada.</p>
+  <ul class="feat"><li>❄️ Aire acondicionado</li><li>🚻 Baño</li><li>💺 Asientos reclinables</li><li>🔌 USB</li><li>🧳 Equipaje</li><li class="note">[CONFIRMAR servicios a bordo]</li></ul>
+  <ul class="stats"><li><b data-n="10">0</b>años de operación</li><li><b data-n="5000">0</b>viajes (ejemplo)</li><li><b data-n="120000">0</b>pasajeros (ejemplo)</li></ul></div>
+  <img loading="lazy" src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?auto=format&fit=crop&w=900&q=70" alt="Bus de JETNORT" /></section>
+
+<section class="navy"><div class="wrap reveal"><h2>Lo que dicen nuestros pasajeros</h2><div class="car" id="car"></div>
+  <p class="note">Reseñas de ejemplo.</p><a class="btn outline" href="#">Déjanos tu reseña</a></div></section>
+
+<section id="contacto" class="wrap contact reveal"><div><h2>Contacto</h2>
+  <p>📍 Oruro: [DIRECCIÓN TERMINAL]<br>📍 Iquique: [DIRECCIÓN OFICINA]</p>
+  <p>📞 <a href="tel:+0000000000">[TELÉFONO]</a></p><p>✉️ <a href="mailto:info@jetnort.com">info@jetnort.com</a></p>
+  <p>🕘 Atención: [HORARIOS DE OFICINA]</p><p class="soc"><a href="#">Facebook</a><a href="#">Instagram</a><a href="https://wa.me/591XXXXXXXX">WhatsApp</a></p></div>
+  <iframe loading="lazy" title="Mapa" src="https://www.google.com/maps?q=Terminal+de+buses+Oruro+Bolivia&output=embed"></iframe></section>
+
+<footer><div class="wrap fgrid"><div><a href="#inicio" class="logo">JET<b>NORT</b></a><p>Transporte de pasajeros Oruro – Iquique.</p></div>
+  <div><b>Enlaces</b><a href="#rutas">Rutas</a><a href="#horarios">Horarios</a><a href="#reservas">Reservas</a><a href="#contacto">Contacto</a></div>
+  <form id="news"><b>Recibe promociones y avisos de viaje</b><input type="email" placeholder="tu@email.com" required aria-label="Email" /><button class="btn sm">Suscribirme</button><span id="nmsg"></span></form></div>
+  <div class="wrap bar"><span>© 2026 JETNORT · Diseñado por [tu nombre]</span><span>Pagos: QR / transferencia · Efectivo en oficina [CONFIRMAR]</span></div></footer>
+<a class="wa" href="https://wa.me/591XXXXXXXX" aria-label="WhatsApp">💬</a>
+</body></html>
